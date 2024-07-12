@@ -462,6 +462,10 @@ footer {
     .carta-seleccion ul {
         width: 100%;
     }
+
+    .carrusel{
+        display: none;
+    }
     
     .carrusel-items img {
         flex: 0 0 100%;
