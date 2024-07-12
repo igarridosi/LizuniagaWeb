@@ -1,0 +1,412 @@
+@font-face {
+    font-family: RegularFont;
+    src: url(/font/Marcellus-Regular.ttf);
+}
+*{
+    font-family: RegularFont;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #FCFCFC;
+}
+
+header{
+    width: 100%;
+    display: block;
+    position: fixed;
+    overflow: hidden;
+}
+
+#header-menu{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+#menu{
+    margin: 1%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    font-style: italic;
+}
+#menu a{
+    font-size: 2em;
+    text-decoration: none;
+    color: white;
+}
+#menu a:hover{
+    color: #12B57E;
+}
+
+#header-menu img{
+    max-width: 7%;
+    margin: 1%;
+}
+
+#section1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+#image1{
+    position: absolute;
+    height: 700px;
+    width: 100vw;
+    background: black;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#image1 img{
+    object-fit: cover;
+    opacity: 0.4;
+}
+
+#section1 h1{
+    font-size: 7em;
+    margin-top: 10%;
+    margin-bottom: 2%;
+}
+
+#content1{
+    display: flex;
+    width: 80%;
+    margin-top: 6%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+#info1{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 2%;
+    
+}
+#telephone{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#telephone img{
+    margin-right: 0.5%;
+}
+
+#social-media{
+    display: flex;
+    justify-content: center;
+}
+
+#section2{
+    margin-top: 7%;
+    margin-bottom: 3%;
+    margin-left: 2%;
+    margin-right: 2%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#section2 div{
+    text-align: center;
+
+}
+#section2 p{
+    font-size: 1.2em;
+}
+#section2 img{
+    height: 300px;
+    width: 30vw;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+#separator{
+    font-size: 3em;
+    text-align: center;
+}
+
+#section3 {
+    background-color: #f7f7f7;
+    margin-top: 2%;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#section3 h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.section3-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 2%;
+}
+
+.testimonio {
+    margin: 40px auto;
+    max-width: 600px;
+    font-style: italic;
+}
+
+.testimonio h3 {
+    margin-top: 10px;
+    font-weight: normal;
+}
+
+#faq {
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#faq h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.faq-content{
+    display: flex;
+    margin-left: 35px;
+}
+
+.faq-content img{
+    width: 20vw;
+    height: 550px;
+    border-radius: 10px;
+    margin-right: 5%;
+}
+
+.faq-item {
+    margin: 20px 0;
+    width: 80%;
+}
+
+.faq-item h3 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.faq-item p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Estilos para la sección de horarios */
+#horarios {
+    padding: 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+    margin: 20px 0;
+}
+
+#horarios h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    margin-bottom: 2%;
+}
+
+#horarios table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: 1.2em;
+}
+
+#horarios th, #horarios td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#horarios th {
+    background-color: #333;
+    color: white;
+}
+
+#horarios tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#horarios tr:hover {
+    background-color: #ddd;
+}
+
+#horarios td {
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    #horarios table {
+        width: 100%;
+    }
+
+    #horarios h2 {
+        font-size: 1.5em;
+    }
+
+    #horarios table, #horarios th, #horarios td {
+        font-size: 1em;
+    }
+}
+
+
+#mapa{ 
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#mapa h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+iframe {
+    width: 100%;
+    height: 400px;
+    background-color: #eaeaea;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-section {
+    margin: 20px 0;
+    width: 300px;
+}
+
+.footer-section h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section li,
+.footer-section a {
+    font-size: 1em;
+    margin: 5px 0;
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+}
+
+.footer-logo img{
+    width: 10vw;
+}
+
+.social-media a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-media img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+.footer-bottom p {
+    font-size: 0.9em;
+    color: #bbb;
+}
+
+@media (max-width: 768px) {
+    #header-menu {
+        flex-direction: column;
+    }
+    #header-menu img{
+        max-width: 25%;
+    }
+
+    #menu {
+        margin-top: 10px;
+        text-align: center;
+        width: 100%;
+    }
+    #menu a{
+        font-size: 1.1em;
+    }
+
+    #info1 {
+        flex-direction: column;
+        align-items: center;
+    }
+    #section1 h1{
+        font-size: 3em;
+        margin-top: 40%;
+    }
+    #section2 {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15%;
+    }
+
+    #section2 img{
+        margin-top: 8%;
+        width: 60vw;
+    }
+
+    .section3-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .faq-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .faq-content img{
+        width: 82vw;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .footer-logo img{
+        width: 50vw;
+    }
+}
