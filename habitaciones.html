@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habitaciones - Lizuniaga</title>
+    <link rel="stylesheet" href="css/habitaciones.css">
+    <link rel="icon" type="image/x-icon" href="img/logo_bg.png">
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+    <div class="elfsight-app-599a9fee-10bb-460f-b436-990973d0231c" data-elfsight-app-lazy></div>
+</head>
+<body>
+    <header>
+        <div id="header-menu">
+            <img src="img/logo_bg.png" alt="" id="lizuniaga-logo">
+            <div id="menu">
+                <a href="home.html">Inicio</a>
+                <a href="carta.html">Carta</a>
+                <a href="habitaciones.html">Habitaciones</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </header>
+    <section id="section1">
+        <div id="image1">
+            <img src="img/habitacion1.jpg" id="header-image">
+        </div>
+        <div id="content1">
+            <h1>HABITACIONES</h1>
+            <p style="font-size: 1.3em;">Descubre nuestras acogedoras habitaciones, diseñadas para ofrecerte el máximo confort. Desde habitaciones dobles con vistas al monte 
+                Larrún hasta suites con sala de estar y vistas panorámicas, encontrarás el lugar perfecto para relajarte y disfrutar de una estancia inolvidable.</p>
+        </div>
+        <div id="info1">
+            <div id="telephone">
+                <img src="img/icons/call_24dp_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                <p>948 63 10 31</p>
+            </div>
+            <div id="social-media">
+                <a href="https://www.instagram.com/lizuniaga/"><img src="img/icons/icons8-instagram-24.png" alt=""></a>
+                <a href="https://www.facebook.com/p/lizuniaga-100086454246429/"><img src="img/icons/icons8-facebook-nuevo-24.png" alt=""></a>
+            </div>
+        </div>
+    </section>
+    <section id="habitaciones">
+        <h2>Nuestras Habitaciones</h2>
+        <div class="habitacion">
+            <img src="img/habitacion1.jpg" alt="Habitación 1">
+            <a href="#" class="ver-mas" onclick="abrirGaleria('Habitacion Doble')">Ver más imágenes</a>
+            <div class="detalles">
+                <h3>Habitación Doble</h3>
+                <p>Descripción breve de la habitación. Incluye cama doble, baño privado y vistas al monte.</p>
+                <button onclick="mostrarFormularioReserva('Habitación Doble')">Reservar</button>
+            </div>
+        </div>
+        <div class="habitacion">
+            <img src="img/habitacion2.jpg" alt="Habitación 2" onclick="abrirGaleria('Habitación Doble')">
+            <a href="#" class="ver-mas" onclick="abrirGaleria('Habitación Familiar')">Ver más imágenes</a>
+            <div class="detalles">
+                <h3>Habitación Familiar</h3>
+                <p>Descripción breve de la habitación. Incluye cama doble, dos camas individuales y baño privado.</p>
+                <button onclick="mostrarFormularioReserva('Habitación Familiar')">Reservar</button>
+            </div>
+        </div>
+        <div class="habitacion">
+            <img src="img/habitacion3.jpg" alt="Habitación 3">
+            <a href="#" class="ver-mas" onclick="abrirGaleria('Suite')">Ver más imágenes</a>
+            <div class="detalles">
+                <h3>Suite</h3>
+                <p>Descripción breve de la habitación. Incluye cama king-size, sala de estar, baño privado y vistas panorámicas.</p>
+                <button onclick="mostrarFormularioReserva('Suite')">Reservar</button>
+            </div>
+        </div>
+        <div id="modal" class="modal">
+            <span class="cerrar" onclick="cerrarGaleria()">&times;</span>
+            <div class="modal-content">
+                <h2 id="modal-titulo">Galería de Imágenes</h2>
+                <div id="galeria-imagenes"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reserva-formulario" style="display: none;">
+        <h2>Reservar Habitación</h2>
+        <form id="formulario-reserva" action="https://formsubmit.co/lizuniaga@lizuniaga.com" method="POST" method="POST">
+            <input type="hidden" id="tipo-habitacion" name="Tipo_habitacion">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="Nombre" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="Email" required>
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="Telefono" required>
+            <label for="fecha-entrada">Fecha de Entrada:</label>
+            <input type="date" id="fecha-entrada" name="Fecha_entrada" required>
+            <label for="fecha-salida">Fecha de Salida:</label>
+            <input type="date" id="fecha-salida" name="Fecha_salida" required>
+            <button type="submit" onclick="loadPage()">Reservar</button>
+        </form>
+        <p>*Hasta que no reciba el correo con nuestra confirmación, su reserva no estaria confirmada.</p>
+    </section>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="img/logo_bg.png" alt="">
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p>Restaurante Lizuniaga</p>
+                <p>Dirección: Garaitarreta Auzoa, 26, 31780 Bera, Navarra</p>
+                <p>Teléfono: 948 63 10 31</p>
+                <p>Email: lizuniaga@lizuniaga.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="home.html">Inicio</a></li>
+                    <li><a href="carta.html">Carta</a></li>
+                    <li><a href="habitaciones.html">Reservas</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <div class="social-media">
+                    <a href="https://www.instagram.com/lizuniaga/"><img src="img/icons/icons8-instagram-24.png" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/p/lizuniaga-100086454246429/"><img src="img/icons/icons8-facebook-nuevo-24.png" alt="Facebook"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Restaurante Lizuniaga. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+
+    function loadPage() {
+            var form = document.getElementById('formulario-reserva');
+
+            if (form.checkValidity()) {
+                swal({
+                    title: "Reserva Enviada",
+                    content: {
+                        element: "div",
+                        attributes: {
+                            innerHTML: `
+                                <p>Gracias por su reserva!</p>
+                                <br>
+                                <p>En cuanto leamos su correo, el equipo de administración de Lizuniaga le mandará un mensaje para poder confirmar su reserva.</p>
+                                <p>Hasta entonces la reserva NO ESTÁ CONFIRMADA.</p>
+                                <br>
+                                <p>Ahora se le abrirá una pestaña para que complete el Captcha y poder verificar que no es un robot.</p>
+                            `
+                        }
+                    },
+                    icon: "success",
+                })
+
+            }
+        }
+
+        function mostrarFormularioReserva(tipoHabitacion) {
+            document.getElementById('tipo-habitacion').value = tipoHabitacion;
+            document.getElementById('reserva-formulario').style.display = 'block';
+            document.getElementById('reserva-formulario').scrollIntoView({ behavior: 'smooth' });
+        }
+
+            // Función para abrir la galería de imágenes
+        function abrirGaleria(tipoHabitacion) {
+            var modal = document.getElementById("modal");
+            var modalTitulo = document.getElementById("modal-titulo");
+            var galeriaImagenes = document.getElementById("galeria-imagenes");
+
+            // Aquí se cargarían dinámicamente las imágenes de acuerdo al tipo de habitación
+            galeriaImagenes.innerHTML = ""; // Limpiar galería por si había imágenes anteriores
+
+            // Ejemplo de imágenes, puedes personalizar esta parte con tus propias imágenes
+            var imagenes = [
+                "img/habitaciones/"+tipoHabitacion+"/1.jpg",
+                "img/habitaciones/"+tipoHabitacion+"/2.jpg",
+                "img/habitaciones/"+tipoHabitacion+"/1.jpg"
+                // Agrega aquí más imágenes según el tipo de habitación
+            ];
+
+            // Construir elementos de imagen dentro de la galería
+            imagenes.forEach(function(imagen) {
+                var img = document.createElement("img");
+                img.src = imagen;
+                img.alt = tipoHabitacion;
+                galeriaImagenes.appendChild(img);
+            });
+
+            modal.style.display = "block";
+            modalTitulo.textContent = `${tipoHabitacion} - Galería de Imágenes`;
+        }
+
+        // Función para cerrar la galería de imágenes
+        function cerrarGaleria() {
+            var modal = document.getElementById("modal");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>

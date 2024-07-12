@@ -1,0 +1,259 @@
+@font-face {
+    font-family: RegularFont;
+    src: url(/font/Marcellus-Regular.ttf);
+}
+*{
+    font-family: RegularFont;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+#header-menu{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+}
+
+#header-menu img{
+    max-width: 7%;
+    margin: 1%;
+}
+
+#menu{
+    margin: 1%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    font-style: italic;
+}
+#menu a{
+    font-size: 2em;
+    text-decoration: none;
+    color: white;
+}
+#menu a:hover{
+    color: #12B57E;
+}
+
+#contacto {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+
+.contacto-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contacto-container h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contacto-container p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+.contacto-info {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.info-item {
+    text-align: left;
+}
+
+.info-item img {
+    width: 24px;
+    margin-right: 10px;
+}
+
+.contacto-form {
+    margin-top: 50px;
+}
+
+.contacto-form h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.contacto-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+    width: 80%;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contacto-form textarea {
+    height: 150px;
+}
+
+.contacto-form button {
+    background-color: #12B57E;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contacto-form button:hover {
+    background-color: #0F8C5A;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-section {
+    margin: 20px 0;
+    width: 300px;
+}
+
+.footer-section h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section li,
+.footer-section a {
+    font-size: 1em;
+    margin: 5px 0;
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+}
+
+.footer-logo img{
+    width: 10vw;
+}
+
+.social-media a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-media img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+.footer-bottom p {
+    font-size: 0.9em;
+    color: #bbb;
+}
+
+@media (max-width: 768px) {
+    #header-menu {
+        flex-direction: column;
+    }
+
+    #header-menu img {
+        max-width: 25%;
+    }
+
+    #menu {
+        margin-top: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    #menu a {
+        font-size: 1.1em;
+    }
+
+    #contacto {
+        padding: 30px 10px;
+    }
+
+    .contacto-container h2 {
+        font-size: 2em;
+    }
+
+    .contacto-container p {
+        font-size: 1em;
+    }
+
+    .contacto-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-item {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .contacto-form input,
+    .contacto-form textarea {
+        width: 90%;
+    }
+
+    footer {
+        padding: 10px 0;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-logo img {
+        width: 50vw;
+    }
+}
