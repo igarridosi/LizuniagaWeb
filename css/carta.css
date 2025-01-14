@@ -69,30 +69,8 @@ header{
     width: 100vw;
 }
 
-#section1{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-}
-
-#image1{
-    position: absolute;
-    height: 700px;
-    width: 100%;
-    background: black;
-    overflow: hidden;
-    z-index: -1;
-}
-
-#image1 img{
-    object-fit: cover;
-    opacity: 0.4;
-    width: 100vw;
-}
-
 #section1 h1{
-    font-size: 7em;
+    font-size: 4em;
     margin-top: 10%;
     margin-bottom: 2%;
 }
@@ -143,12 +121,6 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-}
-
-h1{
-    text-align: center;
-    margin-top: 9%;
-    font-size: 3em;
 }
 
 main {
@@ -219,6 +191,30 @@ main {
     margin: 10px 0;
 }
 
+.raciones-img{
+    display: flex;
+    background-color: #f7f7f7;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 2%;
+}
+
+.raciones-img img{
+    max-width: 40rem;
+}
+
+#nueva-carta-imagenes{
+    display: flex;
+    flex-direction: row;
+}
+
+#nueva-carta-imagenes img{
+    max-width: 30rem;
+}
+
+
 #nueva-carta{
     text-align: center;
     margin-bottom: 40px;
@@ -236,7 +232,7 @@ main {
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
-    background-color: #fff; /* color de fondo blanco */
+    background-color: #fff;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
@@ -326,6 +322,49 @@ button:hover {
     right: 10px;
 }
 
+#opciones-descargable{
+    display: flex;
+    justify-content: center;
+}
+
+#menu-descargable{
+    width: 50%;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 5%;
+}
+
+#menu-descargable h1{
+    font-size: 3rem;
+    padding: 0.2%;
+}
+
+.download-btn {
+    margin-top: 1%;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(90deg, #12B57E, #12b57f98); /* Elegante gradiente */
+    border: none;
+    border-radius: 30px; /* Bordes redondeados */
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sutil sombra */
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+    background: linear-gradient(90deg, #333333bb, #333); /* Cambio de color al pasar el mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Incremento de sombra */
+    transform: translateY(-2px); /* Ligeramente elevado al pasar el mouse */
+}
+
+.download-btn:active {
+    transform: translateY(0); /* Vuelve al lugar cuando se presiona */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Sombra más pequeña */
+}
 
 footer {
     background-color: #333;
@@ -397,7 +436,7 @@ footer {
     color: #bbb;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     #header-menu {
         flex-direction: column;
     }
@@ -415,12 +454,10 @@ footer {
     }
 
     #content1{
-        margin-top: 60px;
         width: 70%;
     }
 
     #section1 h1{
-        font-size: 3em;
         margin-top: 40%;
     }
     
@@ -428,11 +465,36 @@ footer {
         width: 280vw;
     }
 
-    h1{
-        margin-top: 40%;
-    }
     main{
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #opciones-descargable{
+        flex-direction: column;
+    }
+
+    #menu-descargable{
+        width: 100%;
+        margin-bottom: 15%;
+    }
+
+    .download-btn{
+        margin-top: 20px;
+    }
+
+    #nueva-carta-imagenes{
+        flex-direction: column;
+    }
+
+    #nueva-carta-imagenes img{
+        max-width: 17rem;
+    }
+
+    .raciones-img img{
+        max-width: 20rem;
+        margin-bottom: 10%;
     }
 
 
@@ -485,4 +547,23 @@ footer {
     .footer-logo img{
         width: 50vw;
     }
+}
+@media (max-width: 1280px) {
+    #section1{
+        margin-bottom: 15%;
+    }
+}
+
+@media (max-width: 1536px){
+    #content1{
+        margin-top: 10.5%;
+    }
+    #image1{
+        height: 100vh;
+    }
+    #image1 img{
+        height: 120vh;
+    }
+
+
 }

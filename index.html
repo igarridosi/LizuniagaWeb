@@ -1,30 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio - Lizuniaga</title>
     <link rel="stylesheet" href="css/home.css">
     <script src="js/animations.js"></script>
-    <link rel="icon" type="image/x-icon" href="img/logo_bg.png">
+    <link rel="icon" type="image/jpg" href="/img/logo(1).png"/>
     <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
     <div class="elfsight-app-599a9fee-10bb-460f-b436-990973d0231c" data-elfsight-app-lazy></div>
+    <meta property="og:title" content="Lizuniaga">
+    <meta property="og:description" content="Bienvenidos a Lizuniaga. Ubicado en el Col de Lizuniaga, nuestro hostal restaurante es el lugar perfecto para desconectar de la rutina y disfrutar de la naturaleza.">
+    <meta property="og:image" content="https://www.lizuniaga.site/img/logo_searchView.png">
+    <meta property="og:url" content="https://www.lizuniaga.site">
+    <meta property="og:type" content="website">
+    <meta name="google-site-verification" content="rdfS4qQDK-GzGFgFqmEZbDTOlc1fYlVQfdHrt8Fa-Zw" />
 </head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ6KRS40YJ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-WJ6KRS40YJ');
+</script>
+
 <body>
     <header>
         <div id="header-menu">
-            <img src="img/logo_bg.png" alt="Lizuniaga logo" id="Lizuniaga logo">
+            <img src="img/logo_bg.png" alt="Lizuniaga logo" id="lizuniaga-logo">
             <div id="menu">
                 <a href="index.html">Inicio</a>
                 <a href="carta.html">Carta</a>
                 <a href="habitaciones.html">Habitaciones</a>
+                <a href="#" id="show-reservation-form" onclick="reservaForm()">Reservar</a>
                 <a href="contacto.html">Contacto</a>
             </div>
         </div>
     </header>
     <section id="section1">
         <div id="image1">
-            <img src="img/header4_transformed.jpeg" alt="Monte La Rhune">
+            <img src="img/header5.jpg" alt="Monte La Rhune">
         </div>
         <div id="content1">
             <h1>RESTAURANTE LIZUNIAGA</h1>
@@ -37,11 +54,71 @@
                 <p>948 63 10 31</p>
             </div>
             <div id="social-media">
-                <a href="https://www.instagram.com/lizuniaga/"><img src="img/icons/icons8-instagram-24.png" alt="Instagram"></a>
-                <a href="https://www.facebook.com/p/lizuniaga-100086454246429/"><img src="img/icons/icons8-facebook-nuevo-24.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/lizuniaga/" target="_blank"><img src="img/icons/icons8-instagram-24.png" alt="Instagram"></a>
+                <a href="https://www.facebook.com/p/lizuniaga-100086454246429/" target="_blank"><img src="img/icons/icons8-facebook-nuevo-24.png" alt="Facebook"></a>
             </div>
         </div>
     </section>
+    <section class="menu-container">
+        <h1>Novedades</h1>
+        <h2 style="text-align: center; padding: 4%;"> 💕Menu especial San Valentin 💕</h2>
+        <div class="special-menu-content">
+            <img src="img/comida/novedades/menuParaDos.jpg" alt="">
+            <div>
+                <p class="description">
+                    Disfruta de una experiencia gastronómica única con nuestro menú diseñado especialmente para dos personas. Deléitate con una selección de entrantes, platos principales y postres caseros, acompañados de una copa de vino.
+                </p>
+                <p class="description">
+                    Un ambiente acogedor y un servicio dedicado te esperan para que disfrutes de una comida inolvidable.
+                </p>
+                <br>
+                <a class="buy-button" href="https://es.social-commerce.io/dYS5E6" target="_blank">Reservar Ahora</a>
+            </div>
+        </div>
+        <section class="novedades">
+            <div class="plato">
+                <img src="img/comida/novedades/churros.jpg" alt="Plato Novedad">
+                <div class="novedad-texto">
+                    <h3>Churros con Chocolate</h3>
+                    <p>¡Endulza tu día con nuestros churros recién hechos y chocolate caliente!</p>
+                    <p>Perfectos para compartir, disfrutar en cualquier momento, y darte un capricho.
+                        ✨ ¿Un antojo dulce? Ven y pruébalos hoy. ¡Te van a encantar!</p>
+                </div>
+            </div>
+        </section>
+    </section>
+    
+
+    <div id="reservation-form-container" style="display: none;">
+    <div class="reservation-section">
+        <span class="cerrar" onclick="cerrarReservaForm()">&times;</span>
+        <h2>Reserva una Mesa</h2>
+        <form class="reservation-form" action="https://formspree.io/f/mblrpvnd" method="POST">
+
+        <label for="name">Nombre de la reserva:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="name">Numero de telefono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+
+        <label for="name">Correo electronico:</label>
+        <input type="email" id="mail" name="mail" required>
+
+        <label for="guests">Numero de personas:</label>
+        <input type="number" id="personas" name="personas" min="1" max="20" required>
+
+        <label for="date">Fecha:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Hora:</label>
+        <input type="time" id="time" name="time" required>
+
+        <button type="submit">Reserva</button>
+        <p>*Hasta que no reciba el correo con nuestra confirmación, su reserva no estaria confirmada.</p>
+        </form>
+    </div>
+    </div>
+        
     <section id="section2">
         <div>
             <img src="img/comida/comida7.jpg" alt="Deliciosa comida">
@@ -54,7 +131,7 @@
             <p>Relájate y disfruta de las vistas panorámicas que rodean nuestro hostal, perfectas para desconectar y disfrutar de la naturaleza.</p>
         </div>
         <div>
-            <img src="img/habitaciones/Habitación Familiar/2.jpg" alt="Habitación confortable">
+            <img src="img/habitacion1.jpg" alt="Habitación confortable">
             <h2>Habitaciones Confortables</h2>
             <p>Disfruta de nuestras acogedoras habitaciones con todas las comodidades modernas, ideales para un descanso reparador.</p>
         </div>
@@ -63,7 +140,7 @@
         <div class="horario">
             <section id="horarios">
                 <h2>Horarios de Apertura</h2>
-                <table>
+                <table style="display: none;">
                     <tr>
                         <th>Día</th>
                         <th>Horario</th>
@@ -97,19 +174,41 @@
                         <td>11:30-15:00</td>
                     </tr>
                 </table>
+                <table>
+                    <tr>
+                        <th>Día</th>
+                        <th>Horario</th>
+                    </tr>
+                    <tr>
+                        <td>Viernes</td>
+                        <td>11:00 - 15:00</td>
+                    </tr>
+                    <tr>
+                    </tr>
+                        <td>Sabado</td>
+                        <td>09:00 - 17:00</td>
+                    </tr>
+                    <tr></tr>
+                        <td>Domingo</td>
+                        <td>09:00 - 17:00</td>
+                    </tr>
+                </table>
+                <br>
+                <h4>*Consultar antes para el resto de dias</h4>
             </section>
-            <section id="horario-cocina">
+            <section id="horario-cocina" style="display: none;">
                 <h2>Horarios de Cocina</h2>
                 <table>
                     <tr>
                         <td>Comer / Cenar</td>
-                        <td>12:00-14:00 / 19:00-21:00</td>
+                        <td>12:00-16:00 / 19:00-21:00</td>
                     </tr>
                     <tr>
                         <td>Raciones</td>
                         <td>16:00-19:00</td>
                     </tr>
-                </table>    
+                </table>
+                    
             </section>
         </div>
     </section>
@@ -119,7 +218,7 @@
             <div class="faqs">
                 <div class="faq-item">
                     <h3>¿Cómo puedo hacer una reserva?</h3>
-                    <p>Puedes hacer una reserva directamente a través de nuestro sitio web en la sección de reservas o llamándonos al 948 63 10 31.</p>
+                    <p>Puedes hacer una reserva para el hostal a través de nuestro sitio web en la sección de <a href="habitaciones.html" style="text-decoration: none; color: black;">Habitaciones</a>. En el caso de querer reservar para comer o cenar, puedes hacerlo clickando en el boton de "Reservar" arriba en el menu o llamando al 948 63 10 31.</p>
                 </div>
                 <div class="faq-item">
                     <h3>¿Aceptan mascotas?</h3>
@@ -127,15 +226,11 @@
                 </div>
                 <div class="faq-item">
                     <h3>¿Cuál es el horario de check-in y check-out?</h3>
-                    <p>El check-in es a partir de la 13:00 y el check-out es hasta las 12:00. Si necesitas horarios diferentes, por favor contáctanos y haremos lo posible por acomodarte.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>¿Ofrecen opciones de comida para personas con dietas especiales?</h3>
-                    <p>Sí, ofrecemos opciones vegetarianas, veganas y sin gluten. Por favor, infórmanos de tus necesidades dietéticas al momento de hacer la reserva.</p>
+                    <p>El check-in es a partir de la 15:00 hasta las 21:00 y el check-out es hasta las 10:30.</p>
                 </div>
                 <div class="faq-item">
                     <h3>¿Hay estacionamiento disponible?</h3>
-                    <p>Sí, disponemos de estacionamiento gratuito para nuestros huéspedes.</p>
+                    <p>Sí, disponemos de estacionamiento gratuito para nuestros huéspedes y clientes.</p>
                 </div>
                 <div class="faq-item">
                     <h3>¿El Wi-Fi está incluido?</h3>
@@ -143,7 +238,7 @@
                 </div>
                 <div class="faq-item">
                     <h3>¿Cuáles son las actividades disponibles en los alrededores?</h3>
-                    <p>En los alrededores del monte Lizuniaga puedes disfrutar de senderismo, ciclismo, observación de aves y más. También organizamos visitas guiadas y actividades al aire libre para nuestros huéspedes.</p>
+                    <p>En los alrededores del Restaurante Lizuniaga, se pueden disfrutar de diversas actividades al aire libre, como senderismo y ciclismo, permitiendo apreciar la riqueza natural del entorno. Además, es posible explorar el centro histórico de Bera y profundizar en el conocimiento de su patrimonio cultural.</p>
                 </div>
             </div>
             <img src="img/section2_img3.jpg" alt="Restaurante interior">
@@ -204,8 +299,8 @@
             <div class="footer-section">
                 <h4>Síguenos</h4>
                 <div class="social-media">
-                    <a href="https://www.instagram.com/lizuniaga/"><img src="img/icons/icons8-instagram-24.png" alt="Instagram"></a>
-                    <a href="https://www.facebook.com/p/lizuniaga-100086454246429/"><img src="img/icons/icons8-facebook-nuevo-24.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/lizuniaga/" target="_blank"><img src="img/icons/icons8-instagram-24.png" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/p/lizuniaga-100086454246429/" target="_blank"><img src="img/icons/icons8-facebook-nuevo-24.png" alt="Facebook"></a>
                 </div>
             </div>
         </div>
@@ -213,6 +308,6 @@
             <p>&copy; 2024 Restaurante Lizuniaga. Todos los derechos reservados.</p>
         </div>
     </footer>
-    
+
 </body>
 </html>

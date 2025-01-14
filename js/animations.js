@@ -21,3 +21,21 @@ function myFunction(x) {
         document.getElementById("lizuniaga-logo").style.maxWidth = "25%";
     }
 }
+
+document.getElementById('show-reservation-form').addEventListener('click', function(event) {
+    event.preventDefault(); // Previene que el enlace haga un salto a la parte superior de la página.
+    reservaForm(); // Llama a la función reservaForm para mostrar el formulario.
+});
+
+// Define la función reservaForm.
+function reservaForm() {
+    // Muestra el formulario de reserva.
+    document.getElementById('reservation-form-container').style.display = 'flex';
+}
+
+function cerrarReservaForm(){
+    var modal = document.getElementById("reservation-form-container");
+    modal.style.display = "none";
+        
+}
+

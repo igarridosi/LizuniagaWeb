@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Carta - Lizuniaga</title>
         <link rel="stylesheet" href="css/carta.css">
         <script src="js/carrusel.js"></script>
-        <link rel="icon" type="image/x-icon" href="img/logo_bg.png">
+        <link rel="icon" type="image/jpg" href="/img/logo(1).png"/>
         <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
         <div class="elfsight-app-599a9fee-10bb-460f-b436-990973d0231c" data-elfsight-app-lazy></div>
     </head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ6KRS40YJ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-WJ6KRS40YJ');
+</script>
     <body>
         <header>
             <div id="header-menu">
@@ -36,14 +45,39 @@
                     <p>948 63 10 31</p>
                 </div>
                 <div id="social-media">
-                    <a href="https://www.instagram.com/lizuniaga/"><img src="img/icons/icons8-instagram-24.png" alt="Instagram"></a>
-                    <a href="https://www.facebook.com/p/lizuniaga-100086454246429/"><img src="img/icons/icons8-facebook-nuevo-24.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/lizuniaga/" target="_blank"><img src="img/icons/icons8-instagram-24.png" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/p/lizuniaga-100086454246429/" target="_blank"><img src="img/icons/icons8-facebook-nuevo-24.png" alt="Facebook"></a>
                 </div>
             </div>
         </section>
-        <h1>Nuestros Menus</h1>
-        <main>
-            <section id="menu-carta">
+        <main style="display: none;">
+            <section id="menu-carta" style="display: none;">
+                <h2>Menú "LABIAGA"</h2>
+                <div class="menu-categoria">
+                    <h3>Dispone de...</h3>
+                    <ul>
+                        <li>Ensalada Larun</li>
+                    </ul>
+                    <ul>
+                        <li>Paella mixta</li>
+                    </ul>
+                    <ul>
+                        <li>Postre casero a elegir</li>
+                    </ul>
+                </div>
+        
+                <div class="menu-categoria">
+                    <h3>El Menu Incluye</h3>
+                    <ul>
+                        <li>Copa de vino de la casa</li>
+                        <li>Pan</li>
+                        <li>Agua</li>
+                    </ul>
+                </div>
+
+                <h3>TOTAL: 20€</h3>
+            </section>
+            <section id="menu-carta" style="display: none;">
                 <h2>Menú Betikoa</h2>
                 <div class="menu-categoria">
                     <h3>Entrantes</h3>
@@ -103,10 +137,11 @@
                 </div>
 
                 <h3>TOTAL: 20€</h3>
+                <h3>*Tambien hacemos Paella por encargo llamando al 948 63 10 31</h3>
             </section>
 
         </main>
-        <section id="imagenes-comida">
+        <section id="imagenes-comida" style="display: none;">
             <div class="galeria">
                 <img src="img/comida/comida7-zoom.jpg" alt="">
                 <img src="img/comida/comida3.jpg" alt="Comida 2">
@@ -114,6 +149,43 @@
                 <img src="img/comida/comida8.jpg" alt="Comida 4">
             </div>
         </section>
+        <section id="nueva-carta">
+            <h2>Nuestra Carta</h2>
+            <div id="nueva-carta-imagenes">
+                <div class="carta-categoria">
+                    <h3>Carta en Español</h3>
+                    <div class="carta-seleccion">
+                        <img src="img/comida/carta_lizuniaga_es.jpg" alt="">
+                    </div>
+                </div>
+                <div class="carta-categoria">
+                    <h3>Karta Euskaraz</h3>
+                    <div class="carta-seleccion">
+                        <img src="img/comida/carta_lizuniaga_eus.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="opciones-descargable">
+            <div id="menu-descargable">
+                <h1>Nuestros Menús</h1>
+                <p>Explora la variedad de sabores que tenemos para ti.</p>
+                <p>¡Descarga nuestros menús!</p>
+                <a href="/img/pdf/Menus-Lizuniaga.pdf" download class="download-btn">📥 Descargar Menús</a>
+            </div>
+            <div id="menu-descargable">
+                <h1>Desayunos</h1>
+                <p>Descarga nuestro menú de desayunos y descubre opciones deliciosas para cada mañana.</p>
+                <p>¡Empieza tu día con sabor!</p>
+                <a href="/img/pdf/Desayuno-Lizuniaga.pdf" download class="download-btn">📥 Descargar Desayunos</a>
+            </div>
+        </section>
+        <div class="raciones-img">
+            <h1>Raciones para compartir</h1>
+            <img src="img/comida/raciones.jpg" alt="">
+        </div>
+
+        <!--
         <section id="nueva-carta">
             <h2>Nuestra Carta</h2>
             <div class="carta-categoria">
@@ -154,12 +226,12 @@
                 <h3>SEGUNDOS</h3>
                 <div class="carta-seleccion">
                     <ul>
-                        <li>Lomo de bacalado "de autor" confitado <span>16€</span></li>
-                        <li>Chuleta de vaca frisona de 400 gr. <span>24.00€</span></li>
+                        <li>Lomo de bacalao "de autor" confitado <span>16€</span></li>
+                        <li>Entrecote a la plancha <span>20.00€</span></li>
                     </ul>
                     <ul>
                         <li>Magret de pato al "Pedro Ximenez" <span>18.90€</span></li>
-                        <li>Chuletillas de cordero <span>19.90€</span></li>
+                        <li>Cordero asado <span>19.90€</span></li>
                     </ul>
                 </div>
                 <h4>*todos los platos incluyen pimientos y patatas</h4>
@@ -170,14 +242,13 @@
                     <ul>
                         <li>Pastel Vasco <span>4.90€</span></li>
                         <li>Cuajada de oveja <span>4.80€</span></li>
-                        <li>Queso de oveja <span>5.50€</span></li>
-                        <li>Coulant de chocolate <span>4.80€</span></li>
+                        <li>Copa de Cafe <span>4.90€ </span></li>
                     </ul>
                     <ul>
                         <li>Tarta de queso <span>4.20€</span></li>
                         <li>Arroz con leche <span>4.80€</span></li>
                         <li>Natillas <span>4.80€</span></li>
-                        <li>Flan <span>5.50€</span></li>
+                        <li>Tarta Mousse de Chocolate <span>3.90€</span></li>
                     </ul>
                 </div>
             </div>
@@ -193,7 +264,8 @@
             </div>
             <button class="prev">&larr;</button>
             <button class="next">&rarr;</button>
-        </section>         
+        </section>  
+        -->       
         <footer>
             <div class="footer-container">
                 <div class="footer-logo">
@@ -218,8 +290,8 @@
                 <div class="footer-section">
                     <h4>Síguenos</h4>
                     <div class="social-media">
-                        <a href="https://www.instagram.com/lizuniaga/"><img src="img/icons/icons8-instagram-24.png" alt="Instagram"></a>
-                        <a href="https://www.facebook.com/p/lizuniaga-100086454246429/"><img src="img/icons/icons8-facebook-nuevo-24.png" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/lizuniaga/" target="_blank"><img src="img/icons/icons8-instagram-24.png" alt="Instagram"></a>
+                        <a href="https://www.facebook.com/p/lizuniaga-100086454246429/" target="_blank"><img src="img/icons/icons8-facebook-nuevo-24.png" alt="Facebook"></a>
                     </div>
                 </div>
             </div>

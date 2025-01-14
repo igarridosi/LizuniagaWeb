@@ -72,11 +72,12 @@ header{
 }
 
 .info-item {
-    text-align: left;
+    width: 40%;
+    align-items: center;
 }
 
 .info-item img {
-    width: 24px;
+    width: 1.6vw;
     margin-right: 10px;
 }
 
@@ -231,7 +232,11 @@ footer {
 
     .info-item {
         text-align: center;
+        width: 80%;
         margin-bottom: 20px;
+    }
+    .info-item img{
+        width: 10%;
     }
 
     .contacto-form input,

@@ -24,7 +24,6 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 #menu{
     margin: 1%;
@@ -52,6 +51,7 @@ header{
     flex-direction: column;
     align-items: center;
     color: white;
+    height: 60vh;
 }
 
 #image1{
@@ -67,6 +67,7 @@ header{
     object-fit: cover;
     opacity: 0.4;
     width: 100vw;
+    height: 95vh;
 }
 
 #section1 h1{
@@ -110,7 +111,6 @@ header{
 /* Estilos para la sección de habitaciones */
 #habitaciones {
     padding: 20px;
-    background-color: #f9f9f9;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -121,7 +121,7 @@ header{
 #habitaciones h2 {
     font-size: 3em;
     margin-bottom: 50px;
-    margin-top: 25px;
+    margin-top: 10%;
 }
 
 .habitacion {
@@ -218,7 +218,7 @@ header{
 }
 
 #reserva-formulario button:hover {
-    background-color: #555;
+    background-color: #12B57E;
 }
 
 .ver-mas {
@@ -240,6 +240,7 @@ header{
 .habitacion {
     position: relative;
     display: inline-block;
+    margin: 10px;
 }
 
 .habitacion:hover .ver-mas {
@@ -286,18 +287,18 @@ button:hover {
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
-    max-width: 800px;
+    width: 55%;
     position: relative;
 }
 
 .cerrar {
-    color: #ffffff;
+    color: #12B57E;
     margin-left: 25%;
-    font-size: 28px;
+    font-size: 30px;
     font-weight: bold;
     cursor: pointer;
     position: fixed;
+    z-index: 2;
 }
 
 #galeria-imagenes {
@@ -310,6 +311,15 @@ button:hover {
     margin: 10px;
     max-width: 100%;
     height: auto;
+}
+
+#nota-precios{
+    max-width: 65%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 footer {
@@ -427,10 +437,8 @@ button:hover{
     #menu a {
         font-size: 1.1em;
     }
-
-    #content1 {
-        margin-top: 75px;
-        width: 70%;
+    #image1 img{
+        height: 50vh;
     }
 
     #section1 h1 {
@@ -448,6 +456,10 @@ button:hover{
 
     h1 {
         margin-top: 40%;
+    }
+
+    #content-title{
+        margin-top: 90%;
     }
 
     main {
@@ -503,6 +515,12 @@ button:hover{
     #habitaciones {
         padding: 10px;
     }
+    #habitaciones h2{
+        margin-top: 90%;
+    }
+    #habitaciones h3{
+        font-size: 1.9em;
+    }
 
     .habitacion {
         flex-direction: column;
@@ -513,7 +531,8 @@ button:hover{
     }
 
     .detalles p{
-        margin-left: 40px;
+        margin-left: 20px;
+        width: 75vw;
     }
 
     #reserva-formulario {
@@ -521,9 +540,9 @@ button:hover{
     }
 
     .ver-mas {
-        display: none;
-        position: absolute;
-        top: 40%;
+        display: inline;
+        position: absolute; 
+        margin-top: -10%;
         left: 50%;
         transform: translate(-50%, -50%);
         background-color: rgba(0, 0, 0, 0.7);
@@ -532,8 +551,15 @@ button:hover{
         border: none;
         cursor: pointer;
         text-decoration: none;
-        font-size: 16px;
+        font-size: 15px;
         z-index: 100;
+    }
+
+    .cerrar{
+        margin-top: 10px;
+        left: 255px;
+        color: #12B57E;
+        z-index: 2;
     }
 
     .habitacion {
@@ -552,6 +578,7 @@ button:hover{
 
     .modal-content {
         width: 90%;
+        height: auto;
     }
 
     #galeria-imagenes {
@@ -576,4 +603,35 @@ button:hover{
     .footer-logo img {
         width: 50vw;
     }
+
+    #nota-precios{
+        max-width: 90%;
+    }
+}
+@media (max-width: 1280px) {
+    #section1 h1{
+        top: 80%;
+    }
+    #habitaciones{
+        margin-top: 12%;
+    }
+}
+
+@media (max-width: 1536px){
+    #content1{
+        margin-top: 9%;
+    }
+    #image1{
+        height: 100vh;
+    }
+    #image1 img{
+        height: 120vh;
+    }
+    #habitaciones{
+        margin-top: 10%;
+    }
+    .ver-mas{
+        top: 30%;
+    }
+
 }
