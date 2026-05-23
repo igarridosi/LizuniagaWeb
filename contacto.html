@@ -4,29 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Lizuniaga</title>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://static.elfsight.com">
+    <meta name="description" content="Contacta con el Restaurante Hostal Lizuniaga. Teléfono, email y formulario de contacto. Garaitarreta Auzoa, 26, Bera, Navarra.">
     <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="css/layout.css">
     <link rel="icon" type="image/jpg" href="/img/logo(1).png"/>
     <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-    <div class="elfsight-app-599a9fee-10bb-460f-b436-990973d0231c" data-elfsight-app-lazy></div>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ6KRS40YJ"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WJ6KRS40YJ');
+    </script>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ6KRS40YJ"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-gtag('config', 'G-WJ6KRS40YJ');
-</script>
-<body>
+<body class="no-hero">
+    <div class="elfsight-app-599a9fee-10bb-460f-b436-990973d0231c" data-elfsight-app-lazy></div>
     <header>
         <div id="header-menu">
-            <img src="img/logo_bg.png" alt="" id="lizuniaga-logo">
+            <a href="index.html"><img src="img/logo_bg.png" alt="Lizuniaga logo" id="lizuniaga-logo"></a>
+            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">Menu</button>
             <div id="menu">
-                <a href="index.html">Inicio</a>
-                <a href="carta.html">Carta</a>
-                <a href="habitaciones.html">Habitaciones</a>
-                <a href="contacto.html">Contacto</a>
+                <a rel="noopener" href="index.html">Inicio</a>
+                <a rel="noopener" href="carta.html">Carta</a>
+                <a rel="noopener" href="habitaciones.html">Habitaciones</a>
+                <a rel="noopener" href="experiencias.html">Experiencias</a>
+                <a rel="noopener" href="contacto.html">Contacto</a>
             </div>
         </div>
     </header>
@@ -62,39 +67,8 @@ gtag('config', 'G-WJ6KRS40YJ');
         </div>
     </section>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-logo">
-                <img src="img/logo_bg.png" alt="">
-            </div>
-            <div class="footer-section">
-                <h4>Contacto</h4>
-                <p>Restaurante Lizuniaga</p>
-                <p>Dirección: Garaitarreta Auzoa, 26, 31780 Bera, Navarra</p>
-                <p>Teléfono: 948 63 10 31</p>
-                <p>Email: lizuniaga@lizuniaga.com</p>
-            </div>
-            <div class="footer-section">
-                <h4>Enlaces Rápidos</h4>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="carta.html">Carta</a></li>
-                    <li><a href="habitaciones.html">Reservas</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Síguenos</h4>
-                <div class="social-media">
-                    <a href="https://www.instagram.com/lizuniaga/" target="_blank"><img src="img/icons/icons8-instagram-24.png" alt="Instagram"></a>
-                    <a href="https://www.facebook.com/p/lizuniaga-100086454246429/" target="_blank"><img src="img/icons/icons8-facebook-nuevo-24.png" alt="Facebook"></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Restaurante Lizuniaga. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+    <div id="site-footer"></div>
+    <script src="js/nav.js?v=5"></script>
     
 </body>
 </html>

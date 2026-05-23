@@ -4,39 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Habitaciones - Lizuniaga</title>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://static.elfsight.com">
+    <meta name="description" content="Habitaciones y apartamentos con vistas al monte en el Hostal Lizuniaga, Bera, Navarra. Reserva online o por teléfono.">
+    <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/habitaciones.css">
     <link rel="icon" type="image/jpg" href="/img/logo(1).png"/>
     <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-    <div class="elfsight-app-599a9fee-10bb-460f-b436-990973d0231c" data-elfsight-app-lazy></div>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ6KRS40YJ"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WJ6KRS40YJ');
+    </script>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ6KRS40YJ"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-gtag('config', 'G-WJ6KRS40YJ');
-</script>
-<body>
+<body class="with-hero">
+    <div class="elfsight-app-599a9fee-10bb-460f-b436-990973d0231c" data-elfsight-app-lazy></div>
     <header>
         <div id="header-menu">
-            <img src="img/logo_bg.png" alt="" id="Lizuniaga logo">
+            <a href="index.html"><img src="img/logo_bg.png" alt="Lizuniaga logo" id="lizuniaga-logo"></a>
+            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">Menu</button>
             <div id="menu">
-                <a href="index.html">Inicio</a>
-                <a href="carta.html">Carta</a>
-                <a href="habitaciones.html">Habitaciones</a>
-                <a href="contacto.html">Contacto</a>
+                <a rel="noopener" href="index.html">Inicio</a>
+                <a rel="noopener" href="carta.html">Carta</a>
+                <a rel="noopener" href="habitaciones.html">Habitaciones</a>
+                <a rel="noopener" href="experiencias.html">Experiencias</a>
+                <a rel="noopener" href="contacto.html">Contacto</a>
             </div>
         </div>
     </header>
     <section id="section1">
         <div id="image1">
-            <img src="img/habitacion1.jpg" id="header-image" alt="Habitacion">
+            <img src="img/habitacion1.jpg" id="header-image" alt="Habitacion" fetchpriority="high">
         </div>
         <div id="content1">
             <h1>HABITACIONES</h1>
-            <p style="font-size: 1.3em;">Descubre nuestras acogedoras habitaciones, diseñadas para ofrecerte el máximo confort. Desde habitaciones dobles con vistas al monte 
+            <p>Descubre nuestras acogedoras habitaciones, diseñadas para ofrecerte el máximo confort. Desde habitaciones dobles con vistas al monte 
                 Larun hasta Apartamentos Suites con Cama matrimonial, sala de estar, cocina y vistas panorámicas. Encontrarás el lugar perfecto para relajarte y disfrutar de una estancia inolvidable.</p>
         </div>
         <div id="info1">
@@ -45,16 +50,22 @@ gtag('config', 'G-WJ6KRS40YJ');
                 <p>948 63 10 31</p>
             </div>
             <div id="social-media">
-                <a href="https://www.instagram.com/lizuniaga/" target="_blank"><img src="img/icons/icons8-instagram-24.png" alt="Instagram"></a>
-                <a href="https://www.facebook.com/p/lizuniaga-100086454246429/" target="_blank"><img src="img/icons/icons8-facebook-nuevo-24.png" alt="Facebook"></a>
+                <a rel="noopener" href="https://www.instagram.com/lizuniaga/" target="_blank"><img src="img/icons/icons8-instagram-24.png" alt="Instagram"></a>
+                <a rel="noopener" href="https://www.facebook.com/p/lizuniaga-100086454246429/" target="_blank"><img src="img/icons/icons8-facebook-nuevo-24.png" alt="Facebook"></a>
             </div>
         </div>
     </section>
     <section id="habitaciones">
+        
+        
         <h2>Nuestras Habitaciones</h2>
+        <p id="nota-precios">*Les informamos que las reservas de habitaciones para fechas comprendidas entre junio y agosto se gestionarán exclusivamente a través la plataforma Booking.com. Agradecemos su comprensión y les recomendamos realizar sus reservas con antelación para asegurar disponibilidad.</p>
+        <a rel="noopener" href="https://www.booking.com/hotel/es/lizuniaga.es.html" target="_blank" class="download-btn">🛋️ Reservar en Booking</a>
+        
+        <!--
         <div class="habitacion">
             <img src="img/habitaciones/Habitacion Doble/1.jpg" alt="Habitacion Doble">
-            <a href="#" class="ver-mas" onclick="abrirGaleria('Habitacion Doble')">Ver más imágenes</a>
+            <a rel="noopener" href="#" class="ver-mas" onclick="abrirGaleria('Habitacion Doble')">Ver más imágenes</a>
             <div class="detalles">
                 <h3>Habitación Doble</h3>
                 <p>Habitación de dos camas individuales, con baño privado y vistas a la montaña. (2 personas)</p>
@@ -63,7 +74,7 @@ gtag('config', 'G-WJ6KRS40YJ');
         </div>
         <div class="habitacion">
             <img src="img/habitaciones/Habitacion Cama Doble/1.jpg" alt="Habitacion Cama Doble">
-            <a href="#" class="ver-mas" onclick="abrirGaleria('Habitacion Cama Doble')">Ver más imágenes</a>
+            <a rel="noopener" href="#" class="ver-mas" onclick="abrirGaleria('Habitacion Cama Doble')">Ver más imágenes</a>
             <div class="detalles">
                 <h3>Habitacion Cama Doble</h3>
                 <p>Habitación con cama de matrimonio, baño privado y terraza con vistas a la montaña. (2 personas)</p>
@@ -72,7 +83,7 @@ gtag('config', 'G-WJ6KRS40YJ');
         </div>
         <div class="habitacion">
             <img src="img/habitaciones/Apartamento/1.jpg" alt="Apartamento" onclick="abrirGaleria('Apartamento')">
-            <a href="#" class="ver-mas" onclick="abrirGaleria('Apartamento')">Ver más imágenes</a>
+            <a rel="noopener" href="#" class="ver-mas" onclick="abrirGaleria('Apartamento')">Ver más imágenes</a>
             <div class="detalles">
                 <h3>Apartamento familiar</h3>
                 <p>Apartamento de tres habitaciones, baño privado, sala de estar, y terraza con vistas a la montaña. (6 personas)</p>
@@ -81,7 +92,7 @@ gtag('config', 'G-WJ6KRS40YJ');
         </div>
         <div class="habitacion">
             <img src="img/habitaciones/Suite/1.jpg" alt="Suite" onclick="abrirGaleria('Suite')">
-            <a href="#" class="ver-mas" onclick="abrirGaleria('Suite')">Ver más imágenes</a>
+            <a rel="noopener" href="#" class="ver-mas" onclick="abrirGaleria('Suite')">Ver más imágenes</a>
             <div class="detalles">
                 <h3>Apartamento suite</h3>
                 <p>Apartamento Suite de una habitación con cama de matrimonio y sofa cama. Incluye sala de estar, cocina, baño privado, y varias terrazas con vistas a la monataña. (4 personas)</p>
@@ -96,9 +107,11 @@ gtag('config', 'G-WJ6KRS40YJ');
                 <div id="galeria-imagenes"></div>
             </div>
         </div>
+        -->
     </section>
 
-    <section id="reserva-formulario" style="display: none;">
+    <div id="form-notif" role="alert"></div>
+    <section id="reserva-formulario">
         <h2>Reservar Habitación</h2>
         <form id="formulario-reserva" onsubmit="return validateDates()" action="https://formspree.io/f/mblrpvnd" method="POST">
             <input type="hidden" id="tipo-habitacion" name="Tipo_habitacion">
@@ -112,7 +125,7 @@ gtag('config', 'G-WJ6KRS40YJ');
             <input type="date" id="fecha-entrada" name="Fecha_entrada" required>
             <label for="fecha-salida">Fecha de Salida:</label>
             <input type="date" id="fecha-salida" name="Fecha_salida" required>
-            <label for="nombre">Hora aproximada de llegada:</label>
+            <label for="hora_llegada">Hora aproximada de llegada:</label>
             <input type="time" id="hora_llegada" name="Hora_llegada" required>
             <label for="info">Informacion extra (Numero de personas, mascotas, alergias...):</label>
             <input type="text" id="info" name="Info">
@@ -121,89 +134,31 @@ gtag('config', 'G-WJ6KRS40YJ');
         <p>*Hasta que no reciba el correo con nuestra confirmación, su reserva no estaria confirmada.</p>
     </section>
     
-    <footer>
-        <div class="footer-container">
-            <div class="footer-logo">
-                <img src="img/logo_bg.png" alt="Lizuniaga logo">
-            </div>
-            <div class="footer-section">
-                <h4>Contacto</h4>
-                <p>Restaurante Lizuniaga</p>
-                <p>Dirección: Garaitarreta Auzoa, 26, 31780, Navarra</p>
-                <p>Teléfono: 948 63 10 31</p>
-                <p>Email: lizuniaga@lizuniaga.com</p>
-            </div>
-            <div class="footer-section">
-                <h4>Enlaces Rápidos</h4>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="carta.html">Carta</a></li>
-                    <li><a href="habitaciones.html">Reservas</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Síguenos</h4>
-                <div class="social-media">
-                    <a href="https://www.instagram.com/lizuniaga/" target="_blank"><img src="img/icons/icons8-instagram-24.png" alt="Instagram"></a>
-                    <a href="https://www.facebook.com/p/lizuniaga-100086454246429/" target="_blank"><img src="img/icons/icons8-facebook-nuevo-24.png" alt="Facebook"></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Restaurante Lizuniaga. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <div id="site-footer"></div>
     <script>
+    function showNotif(msg, type) {
+        var el = document.getElementById('form-notif');
+        el.textContent = msg;
+        el.className = type;
+        el.style.display = 'block';
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
     function validateDates() {
         var entrada = document.getElementById('fecha-entrada').value;
         var salida = document.getElementById('fecha-salida').value;
 
         if (new Date(salida) < new Date(entrada)) {
-            swal({
-                    title: "Error",
-                    content: {
-                        element: "div",
-                        attributes: {
-                            innerHTML: `
-                                <p>La fecha de salida no puede ser anterior a la fecha de entrada.</p>
-                                <br>
-                                <p>Porfavor introduzca la fecha correcta</p>
-                            `
-                        }
-                    },
-                    icon: "error",
-                })
+            showNotif('La fecha de salida no puede ser anterior a la fecha de entrada. Por favor, corrija las fechas.', 'error');
             return false;
         }
-        loadPage();
+
+        var form = document.getElementById('formulario-reserva');
+        if (form.checkValidity()) {
+            showNotif('Reserva enviada. El equipo de Lizuniaga le confirmará la disponibilidad por correo. Hasta entonces la reserva NO está confirmada.', 'success');
+        }
         return true;
     }
-    function loadPage() {
-            var form = document.getElementById('formulario-reserva');
-
-            if (form.checkValidity()) {
-                swal({
-                    title: "Reserva Enviada",
-                    content: {
-                        element: "div",
-                        attributes: {
-                            innerHTML: `
-                                <p>Gracias por su reserva!</p>
-                                <br>
-                                <p>En cuanto leamos su correo, el equipo de administración de Lizuniaga le mandará un mensaje para poder confirmar su reserva.</p>
-                                <p>Hasta entonces la reserva NO ESTÁ CONFIRMADA.</p>
-                                <br>
-                                <p>Ahora se le abrirá una pestaña para que complete el Captcha y poder verificar que no es un robot. Este proceso puede tardar un poco.</p>
-                            `
-                        }
-                    },
-                    icon: "success",
-                })
-
-            }
-        }
 
         function mostrarFormularioReserva(tipoHabitacion) {
             document.getElementById('tipo-habitacion').value = tipoHabitacion;
@@ -249,5 +204,6 @@ gtag('config', 'G-WJ6KRS40YJ');
             modal.style.display = "none";
         }
     </script>
+    <script src="js/nav.js?v=5"></script>
 </body>
 </html>

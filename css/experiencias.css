@@ -1,0 +1,371 @@
+@font-face {
+    font-family: RegularFont;
+    src: url(/font/Marcellus-Regular.ttf);
+}
+
+* {
+    font-family: RegularFont;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(180deg, #f8f6f2 0%, #ffffff 38%, #f2f7f4 100%);
+}
+
+#hero-experiencias {
+    position: relative;
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 150px 20px 70px;
+    background-image: url('../img/experiencias/banner.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.3rem, 6vw, 5rem);
+    margin-bottom: 16px;
+}
+
+.hero-content p {
+    font-size: clamp(1rem, 1.7vw, 1.35rem);
+    margin-bottom: 22px;
+}
+
+.download-btn {
+    margin-top: 1%;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(90deg, #12B57E, #0f8c5ab3);
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+    background: linear-gradient(90deg, #0F8C5A, #0b6e46);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+#experiencias {
+    padding: 48px 20px;
+    text-align: center;
+    background-color: transparent;
+}
+
+#experiencias h2 {
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    color: #1b252b;
+    margin-bottom: 10px;
+}
+
+.experiencias-subtitle {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 28px;
+}
+
+.experiencias-carousel {
+    width: min(1220px, 95%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 52px 1fr 52px;
+    align-items: center;
+    gap: 10px;
+}
+
+.carousel-viewport {
+    overflow: hidden;
+    padding: 18px 0 20px;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 16px;
+    transition: transform 0.34s ease;
+    will-change: transform;
+}
+
+.experiencia-card {
+    background-color: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: none !important;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    position: relative;
+    flex: 0 0 calc((100% - 32px) / 3);
+    min-width: 0;
+    transform: none;
+    opacity: 1;
+    transition: box-shadow 0.28s ease;
+}
+
+.experiencia-card.is-active {
+    box-shadow: none !important;
+}
+
+.experiencia-media {
+    background: #eef9f5;
+    position: relative;
+}
+
+.experiencia-img {
+    width: 100%;
+    height: 480px;
+    display: block;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.exp-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: auto;
+    max-width: calc(100% - 28px);
+    text-align: center;
+    transform: none;
+    background: linear-gradient(120deg, #76a813, #96c91f);
+    color: #fff;
+    font-size: 0.74rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 7px 12px;
+    border-radius: 999px;
+    z-index: 3;
+    box-shadow: 0 6px 12px rgba(54, 77, 10, 0.3);
+    white-space: nowrap;
+}
+
+.experiencia-content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.experiencia-content h3 {
+    font-size: clamp(1.3rem, 1.7vw, 1.75rem);
+    margin-bottom: 10px;
+}
+
+.experiencia-content p {
+    margin-bottom: 10px;
+    color: #27313a;
+    font-size: 0.92rem;
+}
+
+.experiencia-note {
+    font-weight: bold;
+}
+
+.experiencia-list {
+    margin: 10px 0 14px 20px;
+    color: #27313a;
+}
+
+.experiencia-list li {
+    margin-bottom: 8px;
+}
+
+.card-btn {
+    margin-top: auto;
+    width: fit-content;
+}
+
+.carousel-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid rgba(18, 181, 126, 0.35);
+    background: #ffffff;
+    color: #0f8c5a;
+    font-size: 1.35rem;
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(5, 21, 17, 0.15);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.carousel-btn:hover {
+    transform: translateY(-2px);
+    background: #f0faf6;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    border: none;
+    background: #c8d0cd;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.carousel-dot.is-active {
+    background: #0f8c5a;
+    transform: scale(1.2);
+}
+
+#info-experiencias {
+    background-color: transparent;
+    margin: 0;
+    padding: 20px 20px 50px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.info-block {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+.info-block summary {
+    font-size: 2em;
+    color: #12B57E;
+    cursor: pointer;
+    list-style: none;
+    padding: 24px;
+    font-weight: bold;
+}
+
+.info-block summary::-webkit-details-marker {
+    display: none;
+}
+
+.info-block summary::after {
+    content: "+";
+    float: right;
+    color: #0F8C5A;
+}
+
+.info-block[open] summary::after {
+    content: "-";
+}
+
+.info-content {
+    border-top: 1px solid #e8f2ee;
+    padding: 18px 24px 24px;
+    min-height: 120px;
+}
+
+.info-block p,
+.info-block li {
+    color: #444;
+    line-height: 1.6;
+    font-size: 1.04em;
+}
+
+.info-block ul,
+.info-block ol {
+    margin-left: 22px;
+}
+
+@media (max-width: 1024px) {
+    .experiencia-card {
+        flex-basis: calc((100% - 16px) / 2);
+    }
+
+    .experiencia-img {
+        height: 420px;
+    }
+}
+
+@media (max-width: 768px) {
+    #hero-experiencias {
+        min-height: 65vh;
+        padding-top: 150px;
+    }
+
+    #experiencias h2 {
+        font-size: 2.2em;
+    }
+
+    .experiencias-subtitle {
+        font-size: 1em;
+    }
+
+    .experiencias-carousel {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .carousel-btn {
+        display: none;
+    }
+
+    .experiencia-card {
+        flex-basis: 100%;
+    }
+
+    .experiencia-card,
+    .experiencia-card.is-active {
+        transform: none;
+        opacity: 1;
+    }
+
+    .experiencia-img {
+        height: 320px;
+    }
+
+    .card-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .info-block summary {
+        font-size: 1.8em;
+    }
+
+    .exp-badge {
+        top: 10px;
+        right: 10px;
+        font-size: 0.68rem;
+        padding: 6px 10px;
+    }
+}

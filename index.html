@@ -4,49 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio - Lizuniaga</title>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://static.elfsight.com">
+    <link rel="preconnect" href="https://maps.googleapis.com">
     <link rel="stylesheet" href="css/home.css">
-    <script src="js/animations.js"></script>
+    <link rel="stylesheet" href="css/layout.css">
+    <script src="js/animations.js?v=2" defer></script>
     <link rel="icon" type="image/jpg" href="/img/logo(1).png"/>
     <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-    <div class="elfsight-app-599a9fee-10bb-460f-b436-990973d0231c" data-elfsight-app-lazy></div>
+    <meta name="description" content="Restaurante Hostal Lizuniaga en el Col de Lizuniaga, Bera, Navarra. Cocina tradicional, habitaciones con vistas y experiencias en plena naturaleza.">
     <meta property="og:title" content="Lizuniaga">
     <meta property="og:description" content="Bienvenidos a Lizuniaga. Ubicado en el Col de Lizuniaga, nuestro hostal restaurante es el lugar perfecto para desconectar de la rutina y disfrutar de la naturaleza.">
     <meta property="og:image" content="https://www.lizuniaga.site/img/logo_searchView.png">
     <meta property="og:url" content="https://www.lizuniaga.site">
     <meta property="og:type" content="website">
     <meta name="google-site-verification" content="rdfS4qQDK-GzGFgFqmEZbDTOlc1fYlVQfdHrt8Fa-Zw" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ6KRS40YJ"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WJ6KRS40YJ');
+    </script>
 </head>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ6KRS40YJ"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-gtag('config', 'G-WJ6KRS40YJ');
-</script>
-
-<body>
+<body class="with-hero">
+    <div class="elfsight-app-599a9fee-10bb-460f-b436-990973d0231c" data-elfsight-app-lazy></div>
     <header>
         <div id="header-menu">
-            <img src="img/logo_bg.png" alt="Lizuniaga logo" id="lizuniaga-logo">
+            <a href="index.html"><img src="img/logo_bg.png" alt="Lizuniaga logo" id="lizuniaga-logo"></a>
+            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">Menu</button>
             <div id="menu">
-                <a href="index.html">Inicio</a>
-                <a href="carta.html">Carta</a>
-                <a href="habitaciones.html">Habitaciones</a>
-                <a href="#" id="show-reservation-form" onclick="reservaForm()">Reservar</a>
-                <a href="contacto.html">Contacto</a>
+                <a rel="noopener" href="index.html">Inicio</a>
+                <a rel="noopener" href="carta.html">Carta</a>
+                <a rel="noopener" href="habitaciones.html">Habitaciones</a>
+                <a rel="noopener" href="experiencias.html">Experiencias</a>
+                <!--
+                <a rel="noopener" href="#" id="show-reservation-form" onclick="reservaForm()">Reservar</a>
+                -->
+                <a rel="noopener" href="contacto.html">Contacto</a>
             </div>
         </div>
     </header>
     <section id="section1">
         <div id="image1">
-            <img src="img/header5.jpg" alt="Monte La Rhune">
+            <img src="img/header5.jpg" alt="Monte La Rhune" fetchpriority="high">
         </div>
         <div id="content1">
             <h1>RESTAURANTE LIZUNIAGA</h1>
-            <h2 style="font-size: 1.9em;">Bienvenidos a  Lizuniaga</h2>
-            <p style="font-size: 1.3em;">Ubicado en el Col de Lizuniaga, nuestro hostal restaurante es el lugar perfecto para desconectar de la rutina y disfrutar de la naturaleza. Ofrecemos alojamiento acogedor, cocina tradicional y vistas espectaculares. ¡Ven y descubre la tranquilidad que solo Lizuniaga puede ofrecer!</p>
+            <h2>Bienvenidos a Lizuniaga</h2>
+            <p>Ubicado en el Col de Lizuniaga, nuestro hostal restaurante es el lugar perfecto para desconectar de la rutina y disfrutar de la naturaleza. Ofrecemos alojamiento acogedor, cocina tradicional y vistas espectaculares. !Ven y descubre la tranquilidad que solo Lizuniaga puede ofrecer!</p>
         </div>
         <div id="info1">
             <div id="telephone">
@@ -54,42 +61,37 @@ gtag('config', 'G-WJ6KRS40YJ');
                 <p>948 63 10 31</p>
             </div>
             <div id="social-media">
-                <a href="https://www.instagram.com/lizuniaga/" target="_blank"><img src="img/icons/icons8-instagram-24.png" alt="Instagram"></a>
-                <a href="https://www.facebook.com/p/lizuniaga-100086454246429/" target="_blank"><img src="img/icons/icons8-facebook-nuevo-24.png" alt="Facebook"></a>
+                <a rel="noopener" href="https://www.instagram.com/lizuniaga/" target="_blank"><img src="img/icons/icons8-instagram-24.png" alt="Instagram"></a>
+                <a rel="noopener" href="https://www.facebook.com/p/lizuniaga-100086454246429/" target="_blank"><img src="img/icons/icons8-facebook-nuevo-24.png" alt="Facebook"></a>
             </div>
         </div>
     </section>
-    <section class="menu-container">
-        <h1>Novedades</h1>
-        <h2 style="text-align: center; padding: 4%;"> 💕Menu especial San Valentin 💕</h2>
-        <div class="special-menu-content">
-            <img src="img/comida/novedades/menuParaDos.jpg" alt="">
-            <div>
-                <p class="description">
-                    Disfruta de una experiencia gastronómica única con nuestro menú diseñado especialmente para dos personas. Deléitate con una selección de entrantes, platos principales y postres caseros, acompañados de una copa de vino.
-                </p>
-                <p class="description">
-                    Un ambiente acogedor y un servicio dedicado te esperan para que disfrutes de una comida inolvidable.
-                </p>
-                <br>
-                <a class="buy-button" href="https://es.social-commerce.io/dYS5E6" target="_blank">Reservar Ahora</a>
-            </div>
-        </div>
-        <section class="novedades">
-            <div class="plato">
-                <img src="img/comida/novedades/churros.jpg" alt="Plato Novedad">
-                <div class="novedad-texto">
-                    <h3>Churros con Chocolate</h3>
-                    <p>¡Endulza tu día con nuestros churros recién hechos y chocolate caliente!</p>
-                    <p>Perfectos para compartir, disfrutar en cualquier momento, y darte un capricho.
-                        ✨ ¿Un antojo dulce? Ven y pruébalos hoy. ¡Te van a encantar!</p>
+    <section class="novedades-section">
+        <div class="menu-container">
+            <h1>Novedades</h1>
+            <div class="special-menu-content">
+                <h2>Entrecabritos</h2>
+                <div class="novedades-info">
+                    <img src="img/comida/novedades/entrecabritos.jpg" alt="Entrecabritos" class="novedades_img" loading="lazy">
+                    <div>
+                        <p class="description">
+                            Nuestro entrante estrella: una degustación sublime de Paté, Queso y tierno Confit de Cabrito. Acompañado de crujientes Nachos Caseros y el toque vibrante de nuestro Pico de Gallo fresco. ¡Texturas y sabores que cautivan!
+                        </p>
+                        <p class="description">
+                            ¡Solo disponible por tiempo limitado, no te quedes sin probarlo!
+                        </p>
+                        <br>
+                        <!--
+                        <a rel="noopener" class="buy-button" href="https://es.social-commerce.io/VaOavR" target="_blank">Reservar Ahora</a>
+                        -->
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
     </section>
     
 
-    <div id="reservation-form-container" style="display: none;">
+    <div id="reservation-form-container" class="is-hidden">
     <div class="reservation-section">
         <span class="cerrar" onclick="cerrarReservaForm()">&times;</span>
         <h2>Reserva una Mesa</h2>
@@ -98,13 +100,13 @@ gtag('config', 'G-WJ6KRS40YJ');
         <label for="name">Nombre de la reserva:</label>
         <input type="text" id="name" name="name" required>
 
-        <label for="name">Numero de telefono:</label>
+        <label for="telefono">Numero de telefono:</label>
         <input type="tel" id="telefono" name="telefono" required>
 
-        <label for="name">Correo electronico:</label>
+        <label for="mail">Correo electronico:</label>
         <input type="email" id="mail" name="mail" required>
 
-        <label for="guests">Numero de personas:</label>
+        <label for="personas">Numero de personas:</label>
         <input type="number" id="personas" name="personas" min="1" max="20" required>
 
         <label for="date">Fecha:</label>
@@ -121,26 +123,26 @@ gtag('config', 'G-WJ6KRS40YJ');
         
     <section id="section2">
         <div>
-            <img src="img/comida/comida7.jpg" alt="Deliciosa comida">
+            <img src="img/comida/comida7.jpg" alt="Deliciosa comida" loading="lazy">
             <h2>Deliciosa Comida</h2>
             <p>Saborea nuestra amplia variedad de platos tradicionales y contemporáneos, preparados con ingredientes frescos y de calidad.</p>
         </div>
         <div>
-            <img src="img/section2_img4.jpg" alt="Vistas impresionantes">
+            <img src="img/section2_img4.jpg" alt="Vistas impresionantes" loading="lazy">
             <h2>Vistas Impresionantes</h2>
             <p>Relájate y disfruta de las vistas panorámicas que rodean nuestro hostal, perfectas para desconectar y disfrutar de la naturaleza.</p>
         </div>
         <div>
-            <img src="img/habitacion1.jpg" alt="Habitación confortable">
+            <img src="img/habitacion1.jpg" alt="Habitación confortable" loading="lazy">
             <h2>Habitaciones Confortables</h2>
             <p>Disfruta de nuestras acogedoras habitaciones con todas las comodidades modernas, ideales para un descanso reparador.</p>
         </div>
     </section>    
     <section id="horarios">
         <div class="horario">
-            <section id="horarios">
+            <section>
                 <h2>Horarios de Apertura</h2>
-                <table style="display: none;">
+                <table class="is-hidden">
                     <tr>
                         <th>Día</th>
                         <th>Horario</th>
@@ -180,23 +182,39 @@ gtag('config', 'G-WJ6KRS40YJ');
                         <th>Horario</th>
                     </tr>
                     <tr>
-                        <td>Viernes</td>
-                        <td>11:00 - 15:00</td>
+                        <td>Lunes</td>
+                        <td>Cerrado</td>
                     </tr>
                     <tr>
+                        <td>Martes</td>
+                        <td>Cerrado</td>
                     </tr>
+                    <tr>
+                        <td>Miercoles</td>
+                        <td>12:00 - 15:30</td>
+                    </tr>
+                    <tr>
+                        <td>Jueves</td>
+                        <td>12:00 - 15:30</td>
+                    </tr>
+                    <tr>
+                        <td>Viernes</td>
+                        <td>12:00 - 15:30</td>
+                    </tr>
+                    <tr>
                         <td>Sabado</td>
-                        <td>09:00 - 17:00</td>
+                        <td>09:00 - 21:00</td>
                     </tr>
-                    <tr></tr>
+                    <tr>
                         <td>Domingo</td>
-                        <td>09:00 - 17:00</td>
+                        <td>09:00 - 19:00</td>
                     </tr>
                 </table>
                 <br>
-                <h4>*Consultar antes para el resto de dias</h4>
+                <h4>*Toda la informacion sobre el horario en Google</h4>
+                
             </section>
-            <section id="horario-cocina" style="display: none;">
+            <section id="horario-cocina" class="is-hidden">
                 <h2>Horarios de Cocina</h2>
                 <table>
                     <tr>
@@ -218,7 +236,7 @@ gtag('config', 'G-WJ6KRS40YJ');
             <div class="faqs">
                 <div class="faq-item">
                     <h3>¿Cómo puedo hacer una reserva?</h3>
-                    <p>Puedes hacer una reserva para el hostal a través de nuestro sitio web en la sección de <a href="habitaciones.html" style="text-decoration: none; color: black;">Habitaciones</a>. En el caso de querer reservar para comer o cenar, puedes hacerlo clickando en el boton de "Reservar" arriba en el menu o llamando al 948 63 10 31.</p>
+                    <p>Puedes hacer una reserva para el hostal a traves de nuestro sitio web en la seccion de <a rel="noopener" href="habitaciones.html">Habitaciones</a>. En el caso de querer reservar para comer o cenar, puedes hacerlo clickando en el boton de "Reservar" arriba en el menu o llamando al 948 63 10 31.</p>
                 </div>
                 <div class="faq-item">
                     <h3>¿Aceptan mascotas?</h3>
@@ -241,7 +259,7 @@ gtag('config', 'G-WJ6KRS40YJ');
                     <p>En los alrededores del Restaurante Lizuniaga, se pueden disfrutar de diversas actividades al aire libre, como senderismo y ciclismo, permitiendo apreciar la riqueza natural del entorno. Además, es posible explorar el centro histórico de Bera y profundizar en el conocimiento de su patrimonio cultural.</p>
                 </div>
             </div>
-            <img src="img/section2_img3.jpg" alt="Restaurante interior">
+            <img src="img/section2_img3.jpg" alt="Restaurante interior" loading="lazy">
         </div>
     
     </section>
@@ -273,41 +291,10 @@ gtag('config', 'G-WJ6KRS40YJ');
     </section>
     <section id="mapa">
         <h2>Cómo Llegar</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92944.68723768355!2d-1.7145248148434697!3d43.282399926790646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd511ae2714d4225%3A0xffb0d44ae5f8154f!2sLizuniaga!5e0!3m2!1ses!2ses!4v1718983995159!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe title="Ubicacion de Lizuniaga en Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92944.68723768355!2d-1.7145248148434697!3d43.282399926790646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd511ae2714d4225%3A0xffb0d44ae5f8154f!2sLizuniaga!5e0!3m2!1ses!2ses!4v1718983995159!5m2!1ses!2ses" width="600" height="450" allowfullscreen="" loading="lazy"></iframe>
     </section>
-    <footer>
-        <div class="footer-container">
-            <div class="footer-logo">
-                <img src="img/logo_bg.png" alt="Lizuniaga logo">
-            </div>
-            <div class="footer-section">
-                <h4>Contacto</h4>
-                <p>Restaurante Lizuniaga</p>
-                <p>Dirección: Garaitarreta Auzoa, 26, 31780 Bera, Navarra</p>
-                <p>Teléfono: 948 63 10 31</p>
-                <p>Email: lizuniaga@lizuniaga.com</p>
-            </div>
-            <div class="footer-section">
-                <h4>Enlaces Rápidos</h4>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="carta.html">Carta</a></li>
-                    <li><a href="habitaciones.html">Reservas</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Síguenos</h4>
-                <div class="social-media">
-                    <a href="https://www.instagram.com/lizuniaga/" target="_blank"><img src="img/icons/icons8-instagram-24.png" alt="Instagram"></a>
-                    <a href="https://www.facebook.com/p/lizuniaga-100086454246429/" target="_blank"><img src="img/icons/icons8-facebook-nuevo-24.png" alt="Facebook"></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Restaurante Lizuniaga. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+    <div id="site-footer"></div>
+    <script src="js/nav.js?v=5"></script>
 
 </body>
 </html>

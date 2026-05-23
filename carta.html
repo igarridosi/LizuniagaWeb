@@ -4,54 +4,62 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Carta - Lizuniaga</title>
+        <link rel="preconnect" href="https://www.googletagmanager.com">
+        <link rel="preconnect" href="https://static.elfsight.com">
+        <meta name="description" content="Descubre la carta, menús y raciones del Restaurante Lizuniaga en Bera, Navarra. Cocina de temporada con producto fresco de montaña.">
+        <link rel="stylesheet" href="css/layout.css">
         <link rel="stylesheet" href="css/carta.css">
-        <script src="js/carrusel.js"></script>
         <link rel="icon" type="image/jpg" href="/img/logo(1).png"/>
         <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-        <div class="elfsight-app-599a9fee-10bb-460f-b436-990973d0231c" data-elfsight-app-lazy></div>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ6KRS40YJ"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WJ6KRS40YJ');
+        </script>
     </head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ6KRS40YJ"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-gtag('config', 'G-WJ6KRS40YJ');
-</script>
-    <body>
+    <body class="with-hero">
+        <div class="elfsight-app-599a9fee-10bb-460f-b436-990973d0231c" data-elfsight-app-lazy></div>
         <header>
             <div id="header-menu">
-                <img src="img/logo_bg.png" alt="" id="Lizuniaga logo">
+                <a href="index.html"><img src="img/logo_bg.png" alt="Lizuniaga logo" id="lizuniaga-logo"></a>
+                <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">Menu</button>
                 <div id="menu">
-                    <a href="index.html">Inicio</a>
-                    <a href="carta.html">Carta</a>
-                    <a href="habitaciones.html">Habitaciones</a>
-                    <a href="contacto.html">Contacto</a>
+                    <a rel="noopener" href="./index.html">Inicio</a>
+                    <a rel="noopener" href="carta.html">Carta</a>
+                    <a rel="noopener" href="habitaciones.html">Habitaciones</a>
+                    <a rel="noopener" href="experiencias.html">Experiencias</a>
+                    <a rel="noopener" href="contacto.html">Contacto</a>
                 </div>
             </div>
         </header>
         <section id="section1">
             <div id="image1">
-                <img src="img/comida/restaurante.jpg" id="header-image" alt="Restaurante">
+                <img src="img/comida/restaurante.jpg" id="header-image" alt="Restaurante" fetchpriority="high">
             </div>
             <div id="content1">
                 <h1>CARTA</h1>
-                <p style="font-size: 1.3em;">Descubre nuestros exquisitos menús Betikoa y Larun. Disfruta de una selección de entrantes y platos principales y acompañados de postres caseros, todo ello preparado con ingredientes frescos y de calidad con unas vistas maravillosas. ¡Perfecto para una experiencia culinaria inolvidable!</p>
+                <p>Descubre nuestros menus Betikoa y Larun, preparados con producto fresco y cocina de temporada en un entorno unico de montana.</p>
             </div>
+            <section class="carta-top-actions">
+                <a rel="noopener" href="tel:+34948631031" class="download-btn">Reservar por telefono</a>
+                <a rel="noopener" href="https://wa.me/34657472020" target="_blank" class="download-btn secondary">Reservar por WhatsApp</a>
+            </section>
             <div id="info1">
                 <div id="telephone">
                     <img src="img/icons/call_24dp_FILL0_wght400_GRAD0_opsz24.svg" alt="Telefono">
                     <p>948 63 10 31</p>
                 </div>
                 <div id="social-media">
-                    <a href="https://www.instagram.com/lizuniaga/" target="_blank"><img src="img/icons/icons8-instagram-24.png" alt="Instagram"></a>
-                    <a href="https://www.facebook.com/p/lizuniaga-100086454246429/" target="_blank"><img src="img/icons/icons8-facebook-nuevo-24.png" alt="Facebook"></a>
+                    <a rel="noopener" href="https://www.instagram.com/lizuniaga/" target="_blank"><img src="img/icons/icons8-instagram-24.png" alt="Instagram"></a>
+                    <a rel="noopener" href="https://www.facebook.com/p/lizuniaga-100086454246429/" target="_blank"><img src="img/icons/icons8-facebook-nuevo-24.png" alt="Facebook"></a>
                 </div>
             </div>
         </section>
-        <main style="display: none;">
-            <section id="menu-carta" style="display: none;">
+        <main class="is-hidden">
+            <section class="is-hidden">
                 <h2>Menú "LABIAGA"</h2>
                 <div class="menu-categoria">
                     <h3>Dispone de...</h3>
@@ -77,7 +85,7 @@ gtag('config', 'G-WJ6KRS40YJ');
 
                 <h3>TOTAL: 20€</h3>
             </section>
-            <section id="menu-carta" style="display: none;">
+            <section class="is-hidden">
                 <h2>Menú Betikoa</h2>
                 <div class="menu-categoria">
                     <h3>Entrantes</h3>
@@ -141,7 +149,7 @@ gtag('config', 'G-WJ6KRS40YJ');
             </section>
 
         </main>
-        <section id="imagenes-comida" style="display: none;">
+        <section id="imagenes-comida" class="is-hidden">
             <div class="galeria">
                 <img src="img/comida/comida7-zoom.jpg" alt="">
                 <img src="img/comida/comida3.jpg" alt="Comida 2">
@@ -149,40 +157,29 @@ gtag('config', 'G-WJ6KRS40YJ');
                 <img src="img/comida/comida8.jpg" alt="Comida 4">
             </div>
         </section>
-        <section id="nueva-carta">
-            <h2>Nuestra Carta</h2>
-            <div id="nueva-carta-imagenes">
-                <div class="carta-categoria">
-                    <h3>Carta en Español</h3>
-                    <div class="carta-seleccion">
-                        <img src="img/comida/carta_lizuniaga_es.jpg" alt="">
-                    </div>
+        <section id="carta-layout">
+            <article class="carta-panel">
+                <h2>Nuestra Carta</h2>
+                <p>Productos de temporada, cocina de cercania y recetas con identidad propia.</p>
+                <div class="carta-seleccion">
+                    <img src="img/comida/cartanueva.jpeg" alt="Carta Lizuniaga" loading="lazy">
                 </div>
-                <div class="carta-categoria">
-                    <h3>Karta Euskaraz</h3>
-                    <div class="carta-seleccion">
-                        <img src="img/comida/carta_lizuniaga_eus.jpg" alt="">
-                    </div>
+            </article>
+
+            <!--
+            <article class="carta-panel">
+                <h2>Nuestro Menu</h2>
+                <p>Ideal para comidas en grupo y planes especiales de fin de semana.</p>
+                <div id="menu-descargable">
+                    <img src="/img/comida/menu_betikoa.jpg" alt="Menu Betikoa">
                 </div>
-            </div>
+            </article>
+            -->
         </section>
-        <section id="opciones-descargable">
-            <div id="menu-descargable">
-                <h1>Nuestros Menús</h1>
-                <p>Explora la variedad de sabores que tenemos para ti.</p>
-                <p>¡Descarga nuestros menús!</p>
-                <a href="/img/pdf/Menus-Lizuniaga.pdf" download class="download-btn">📥 Descargar Menús</a>
-            </div>
-            <div id="menu-descargable">
-                <h1>Desayunos</h1>
-                <p>Descarga nuestro menú de desayunos y descubre opciones deliciosas para cada mañana.</p>
-                <p>¡Empieza tu día con sabor!</p>
-                <a href="/img/pdf/Desayuno-Lizuniaga.pdf" download class="download-btn">📥 Descargar Desayunos</a>
-            </div>
-        </section>
+
         <div class="raciones-img">
             <h1>Raciones para compartir</h1>
-            <img src="img/comida/raciones.jpg" alt="">
+            <img src="img/comida/racionesnueva.jpeg" alt="Raciones para compartir" loading="lazy">
         </div>
 
         <!--
@@ -266,38 +263,50 @@ gtag('config', 'G-WJ6KRS40YJ');
             <button class="next">&rarr;</button>
         </section>  
         -->       
-        <footer>
-            <div class="footer-container">
-                <div class="footer-logo">
-                    <img src="img/logo_bg.png" alt="">
-                </div>
-                <div class="footer-section">
-                    <h4>Contacto</h4>
-                    <p>Restaurante Lizuniaga</p>
-                    <p>Dirección: Garaitarreta Auzoa, 26, 31780 Bera, Navarra</p>
-                    <p>Teléfono: 948 63 10 31</p>
-                    <p>Email: lizuniaga@lizuniaga.com</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Enlaces Rápidos</h4>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="carta.html">Carta</a></li>
-                        <li><a href="habitaciones.html">Reservas</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Síguenos</h4>
-                    <div class="social-media">
-                        <a href="https://www.instagram.com/lizuniaga/" target="_blank"><img src="img/icons/icons8-instagram-24.png" alt="Instagram"></a>
-                        <a href="https://www.facebook.com/p/lizuniaga-100086454246429/" target="_blank"><img src="img/icons/icons8-facebook-nuevo-24.png" alt="Facebook"></a>
-                    </div>
-                </div>
+        <div id="site-footer"></div>
+        <script src="js/nav.js?v=5"></script>
+
+        <!-- Lightbox -->
+        <div id="lightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
+            <button id="lightbox-close" aria-label="Cerrar imagen">&times;</button>
+            <div id="lightbox-content">
+                <img id="lightbox-img" src="" alt="">
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Restaurante Lizuniaga. Todos los derechos reservados.</p>
-            </div>
-        </footer>
+        </div>
+
+        <script>
+        (function () {
+            var lightbox = document.getElementById('lightbox');
+            var lightboxImg = document.getElementById('lightbox-img');
+            var lightboxClose = document.getElementById('lightbox-close');
+
+            function openLightbox(src, alt) {
+                lightboxImg.src = src;
+                lightboxImg.alt = alt || '';
+                lightbox.classList.add('active');
+                document.body.classList.add('lightbox-open');
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+                document.body.classList.remove('lightbox-open');
+                lightboxImg.src = '';
+            }
+
+            document.querySelectorAll('.carta-seleccion img, .raciones-img img').forEach(function (img) {
+                img.addEventListener('click', function () { openLightbox(img.src, img.alt); });
+            });
+
+            lightboxClose.addEventListener('click', closeLightbox);
+
+            lightbox.addEventListener('click', function (e) {
+                if (e.target === lightbox) closeLightbox();
+            });
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') closeLightbox();
+            });
+        })();
+        </script>
     </body>
 </html>
